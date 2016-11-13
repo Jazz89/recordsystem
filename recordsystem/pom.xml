@@ -10,6 +10,8 @@
 		<module>recordsystem-rest</module>
 		<module>recordsystem-service</module>
 		<module>recordsystem-repository</module>
+		<module>recordsystem-app</module>
+		<module>recordsystem-security</module>
 	</modules>
 
 	<parent>
@@ -23,7 +25,19 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
-
+		<dependency>
+			<groupId>hsqldb</groupId>
+			<artifactId>hsqldb</artifactId>
+			<version>1.8.0.10</version>
+		</dependency>
 	</dependencies>
 
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+		</plugins>
+	</build>
 </project>
